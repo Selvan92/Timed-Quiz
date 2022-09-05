@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Quiz Challenge</title>
+  </head>
+
+  <body>
+
+
+    <!-- header -->
+<div id="landing-page">
+
+    <!-- view high scores link showed in all pages -->
+    <div id="view-highscores">
+    <a href="#high-scores">View High Scores</a>
+    </div>
+   
+    <!-- timer in all the pages where zero in the landing page and static in the view high score page -->
+    <p>Time:</p>
+
+
+    <!-- landing page -->
+
+    <!-- start quiz heading -->
+    <h1>Coding Quiz Challenge</h1>
+
+    <!-- description of the quiz -->
+
+    <p>Try to answer the following code-related questions within the time limit.<br>Keep in mind that incorrect answers will penalize your score/time <br> by ten seconds! </p>
+
+    <!-- start quiz button -->
+    <div>
+    
+    <a href='#questions-page'>
+    <button id="start-quiz">Start Quiz</button>
+</a>
+</div>
+</div>
+
+    <!-- questions -->
+<div id="questions-page">
+
+
+    <!-- questions and options as a button -->
+    <p>
+      Questions
+    </p>
+
+    <!-- feedback on the answer correct or wrong -->
+    <p class="qn-feddback">
+      qn-feedback
+    </p>
+
+</div>
+
+    <!-- resul page -->
+
+    <!-- all done header -->
+    <h1>
+      All Done!
+    </h1>
+    <!-- your final score is  -->
+    <p>
+      Your final score is <span id="score-result"></span>
+    </p>
+    <!-- enter initials and input -->
+    <label>
+      Enter Initials:
+    </label>
+   
+    <input class="input-initials"> </input>
+
+    <!-- submit button -->
+    <button id="initails-sumbit">
+    Submit
+    </button>
+    <!-- feed back on the initials input wrong /correct like alpha numerics -->
+<p class="initials-feedback"></p>
+
+
+    <!-- high score page -->
+    <div id="high-scores">
+    
+   
+    <!-- high score header -->
+    <h1>
+    High Scores
+    </h1>
+    
+    <!-- show the initials and the score -->
+    <field class="initials-score">
+    </field>
+    <!-- navigation button for go back to start or clear high scores -->
+    <button id="goback">
+    Go Back
+    </button>
+    <button id="clearhighscore">
+    Clear High Scores
+    </button>
+     </div>
+
+
+
+
+
+  </body>
+
+</html>

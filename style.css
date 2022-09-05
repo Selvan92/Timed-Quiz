@@ -1,0 +1,16 @@
+.questions-page {
+    display:none;
+  }
+  #start-quiz {
+    
+    background: blue;
+    color: white;
+    border-radius: 4px;
+  }
+  #start-quiz:hover{background-color: lightblue;}
+  #start-quiz:active {
+    background-color: lightblue;
+    box-shadow: 0 2px #666;
+    transform: translateY(4px);
+    
+  }
