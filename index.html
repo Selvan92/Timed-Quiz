@@ -12,36 +12,38 @@
   <body>
 
 <header>
-  <!-- view high scores link showed in all pages -->
+  <!-- view high scores link -->
   <div id="view-highscores">
-    <a href="#high-scores">View High Scores</a>
+    <a href="#high-scores" style="text-decoration: none;">View High Scores</a>
     </div>
    
-    <!-- timer in all the pages where zero in the landing page and static in the view high score page -->
-    <div>Time: <span id="span-timer">5</span> Sec</div>
+    <!-- timer -->
+    <div id="timer">Time: <span id="span-timer">5</span> Sec</div>
 
 
 </header>
-    
+     <!-- landing page -->
 <section id="landing-page" >
 
   
 
-    <!-- landing page -->
+   
 
     <!-- start quiz heading -->
     <h1>Coding Quiz Challenge</h1>
 
     <!-- description of the quiz -->
 
-    <p>Try to answer the following code-related questions within the time limit.<br>Keep in mind that incorrect answers will penalize your score/time <br> by ten seconds! </p>
+    <p id="quizdescription">Try to answer the following code-related questions within the time limit.<br>Keep in mind that incorrect answers will penalize your score/time <br> by ten seconds! </p>
 
     <!-- start quiz button -->
     
+    <div id="buttonstart">
+      <button id="btnstart-quiz">Start Quiz</button>
+    </div>
     
-    <!-- <a href='#questions-page'> -->
-    <button id="btnstart-quiz">Start Quiz</button>
-  <!-- </a> -->
+    
+  
 
 
 </section>
@@ -62,7 +64,7 @@
 
 </section>
 
-    <!-- resul page -->
+    <!-- result page -->
 <section id="result-page" class="hide">
     <!-- all done header -->
     <h1>

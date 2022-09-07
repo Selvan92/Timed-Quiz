@@ -1,16 +1,52 @@
 .hide {
     display:none;
   }
-  #start-quiz {
+header {
+  display: flex;
+  width: 100%; 
+  padding-top: 20px; 
+  font-size: larger;
+  font-weight: bold;
+  justify-content: space-between;
+  
+}
+#timer {
+  padding-right: 30px;
+}
+#view-highscores {
+  padding-left: 30px;
+}
+#landing-page {
+  width: 100%;
+
+}
+h1 {
+width: 100%;
+padding-top: 30px;
+font-size: 50px;
+text-align: center;
+
+}
+
+#quizdescription {
+  text-align: center;
+  font-size: 30px;
+}
+#buttonstart {
+  text-align: center;
+}
+  #btnstart-quiz {
     
-    background: blue;
+    font-size: xx-large;
+    padding: 10px 10px;
+    background: rgb(30, 1, 86);
     color: white;
-    border-radius: 4px;
+    text-decoration: solid;
+    border-radius: 10px;    
   }
-  #start-quiz:hover{background-color: lightblue;}
-  #start-quiz:active {
+  #btnstart-quiz:hover{background-color: rgb(89, 142, 160);}
+  #btnstart-quiz:active {
     background-color: lightblue;
     box-shadow: 0 2px #666;
-    transform: translateY(4px);
-    
+    transform: translateY(4px);  
   }
