@@ -2,26 +2,30 @@
 <html lang="en">
 
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/> 
+    <link href="./Asset/style.css" rel="stylesheet"/>
     <title>Coding Quiz Challenge</title>
   </head>
 
   <body>
 
-
-    <!-- header -->
-<div id="landing-page">
-
-    <!-- view high scores link showed in all pages -->
-    <div id="view-highscores">
+<header>
+  <!-- view high scores link showed in all pages -->
+  <div id="view-highscores">
     <a href="#high-scores">View High Scores</a>
     </div>
    
     <!-- timer in all the pages where zero in the landing page and static in the view high score page -->
-    <p>Time:</p>
+    <div>Time: <span id="span-timer">5</span> Sec</div>
 
+
+</header>
+    
+<section id="landing-page" >
+
+  
 
     <!-- landing page -->
 
@@ -33,16 +37,17 @@
     <p>Try to answer the following code-related questions within the time limit.<br>Keep in mind that incorrect answers will penalize your score/time <br> by ten seconds! </p>
 
     <!-- start quiz button -->
-    <div>
     
-    <a href='#questions-page'>
-    <button id="start-quiz">Start Quiz</button>
-</a>
-</div>
-</div>
+    
+    <!-- <a href='#questions-page'> -->
+    <button id="btnstart-quiz">Start Quiz</button>
+  <!-- </a> -->
+
+
+</section>
 
     <!-- questions -->
-<div id="questions-page">
+<section id="questions-page" class="hide" >
 
 
     <!-- questions and options as a button -->
@@ -51,14 +56,14 @@
     </p>
 
     <!-- feedback on the answer correct or wrong -->
-    <p class="qn-feddback">
+    <p class="qn-feedback">
       qn-feedback
     </p>
 
-</div>
+</section>
 
     <!-- resul page -->
-
+<section id="result-page" class="hide">
     <!-- all done header -->
     <h1>
       All Done!
@@ -81,8 +86,12 @@
     <!-- feed back on the initials input wrong /correct like alpha numerics -->
 <p class="initials-feedback"></p>
 
+</section>
 
     <!-- high score page -->
+
+<section id="highscore-page" class="hide">
+
     <div id="high-scores">
     
    
@@ -103,10 +112,10 @@
     </button>
      </div>
 
+    </section>
 
 
-
-
+<script src="./Asset/script.js"></script>
   </body>
 
 </html>
