@@ -18,7 +18,7 @@
     </div>
    
     <!-- timer -->
-    <div id="timer">Time: <span id="span-timer">200</span> Sec</div>
+    <div id="timer">Time: <span id="span-timer">60</span> Sec</div>
 
 
 </header>
@@ -81,7 +81,7 @@
       Enter Initials:
     </label>
    
-    <input type="text" class="input-initials"> </input>
+    <input type="text" id="input-initials"> </input>
 
     <!-- submit button -->
     <button id="initials-submit" class ="button">
@@ -96,21 +96,21 @@
 
 <section id="highscore-page" class="hide">
 
-    <div id="high-scores" class="scorecontent">
+    <div id="high-scores" >
     
    
     <!-- high score header -->
-    <h1>
+    <h1 id="headerhighscores">
     High Scores
     </h1>
     
     <!-- show the initials and the score -->
 
-    <field id="initials-score" class="input-initials">1.
+    <field id="initials-score" >
     </field>
 
     <!-- navigation button for go back to start or clear high scores -->
-    <div>
+    <div id="btnhighscore">
     <button id="goback" class ="button">
     Go Back
     </button>
@@ -118,7 +118,8 @@
     Clear Scores
     </button>
   </div>
-     </div>
+  </div>
+    
 
     </section>
 

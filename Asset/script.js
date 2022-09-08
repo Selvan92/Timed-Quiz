@@ -230,28 +230,9 @@ function clearscore () {
 function nameDisplayCheck() {
   if (localStorage.getItem('name')) {
     let name = localStorage.getItem('name');
-    initialsScore.textContent=name;
+    initialsScore.textContent=name + "'s score is " +timeRemaining;
   }
 }
-
-
-
-
-
-
-
-
-
-
-//get input value
-
-
-//show the initial input and the score in the highscore page
-
-//store the highscore page outputs
-
-//click go back button to load landing page
-
 
 var goBack = document.getElementById('goback');
 goBack.addEventListener('click',btngoBack);
@@ -261,7 +242,6 @@ goBack.addEventListener('click',btngoBack);
   }
  
 
-//click clear high scores to clear the stored values
 
 
 
