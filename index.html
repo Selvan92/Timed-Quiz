@@ -18,7 +18,7 @@
     </div>
    
     <!-- timer -->
-    <div id="timer">Time: <span id="span-timer">10</span> Sec</div>
+    <div id="timer">Time: <span id="span-timer">200</span> Sec</div>
 
 
 </header>
@@ -58,7 +58,7 @@
 
     <div id="question"><p>Question</p>
     </div>
-    <div>
+    <div id="buttonchoice">
     <button class="choice" id="A" onclick="checkAnswer('A')">A</button>
     <button class="choice" id="B" onclick="checkAnswer('B')">B</button>
     <button class="choice" id="C" onclick="checkAnswer('C')">C</button>
@@ -66,8 +66,10 @@
     </div>
 
     <!-- feedback on the answer correct or wrong -->
-    <p class="qn-feedback">
-      qn-feedback
+   
+   <hr>
+    <p id="qn-feedback">
+      
     </p>
 
 </section>
@@ -100,7 +102,7 @@
     <input class="input-initials"> </input>
 
     <!-- submit button -->
-    <button id="initails-sumbit">
+    <button id="initials-submit">
     Submit
     </button>
     <!-- feed back on the initials input wrong /correct like alpha numerics -->

@@ -149,44 +149,96 @@ function showQuestionPage() {
     
     renderQuestion();
     }
- 
-    function nextQuestion() {
+ //moving to the next question and score page while on last quesion
+    function nextQuestion() { 
+    if (runningQuestion < lastQuestion){
       runningQuestion++;
       renderQuestion();
+    
     }
+    else {
+      clearInterval(timerId);
+      showResultPage();
+    }
+  }
 choiceA.addEventListener('click',nextQuestion);
 choiceB.addEventListener('click',nextQuestion);
 choiceC.addEventListener('click',nextQuestion);
 choiceD.addEventListener('click',nextQuestion);
 
-if (runningQuestion === questions[2]) {
-  //choiceA.addEventListener('click',showResultPage);
-  //choiceB.addEventListener('click',showResultPage);
-  //choiceC.addEventListener('click',showResultPage);
-  //choiceD.addEventListener('click',showResultPage);
-showResultPage();
-}
-   
-  
- 
 
+//check answer
+
+function checkAnswer(){
+  if(questions[runningQuestion].correct){
+      // answer is correct
+      
+      
+      answerIsCorrect();
+  }else{
+      // answer is wrong
+      
+      answerIsWrong();
+  }
+ 
+}
+
+// answer is correct
+function answerIsCorrect(){
+  document.getElementById(qnFeedback).innerHTML = "Correct!";
+}
+
+// answer is Wrong
+function answerIsWrong(){
+  document.getElementById(qnFeedback).innerHTML = "Wrong!";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//initals submit
+var initialsSubmit = document.getElementById('initials-submit');
+initialsSubmit.addEventListener('click',initialSubmit);
+   
+  function initialSubmit() {
+    landingPage.classList.add("hide");
+    questionsPage.classList.add("hide");
+    resultPage.classList.add("hide");
+    highscorePage.classList.remove("hide");
+  }
+ 
 
 
 
 
 //show the feed back for the answer
 
+//store the input valu in the initials
+
+
+
 //function answerIscorrect() {
  // document.getElementById().
 //}
 
-//next button to move on to the next question
+
 
 //INITIAL PAGE
 
 //Add initials and submit
 
 //FINAL SCORE PAGE
+
 // show the final score with the initials
 
 //click go back button to reload form starting
