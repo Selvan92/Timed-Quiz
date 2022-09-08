@@ -48,10 +48,10 @@ function showHighScorePage(){
 //TIME
 
 //Need to get the time running while starting quiz
-let timeRemaining;
+let timeRemaining = Number(spanTimer.textContent);
 function startTimer() {
     timerId = setInterval(function(){
-        timeRemaining = Number(spanTimer.textContent)-1;
+        timeRemaining --;
 spanTimer.textContent=timeRemaining;
 
 //if time ends show the result page
@@ -77,10 +77,6 @@ function showResultPage(){
 
     resultPage.classList.remove("hide");
 }
-
-
-//time has to decrease when answering the wrong question
-
 
 
 
@@ -173,7 +169,8 @@ function checkAnswer(answer){
       answerIsCorrect();
   }else{
       // answer is wrong
-      timeRemaining =-10;
+      timeRemaining = timeRemaining - 10;
+      console.log(timeRemaining)
       answerIsWrong();
       
   }
@@ -208,9 +205,11 @@ initialsSubmit.addEventListener('click',initialSubmit);
 
 
 
-//decrease 10 sec for wrong answer
+
 
 //show the score as time left
+
+document.getElementById("score-result").innerHTML=timeRemaining;
 
 //store the input value in the initials
 
