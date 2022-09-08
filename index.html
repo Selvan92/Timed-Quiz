@@ -14,11 +14,11 @@
 <header>
   <!-- view high scores link -->
   <div id="view-highscores">
-    <a href="#high-scores" style="text-decoration: none;">View High Scores</a>
+    <a  href="#high-scores" style="text-decoration: none;">View High Scores</a>
     </div>
    
     <!-- timer -->
-    <div id="timer">Time: <span id="span-timer">5</span> Sec</div>
+    <div id="timer">Time: <span id="span-timer">10</span> Sec</div>
 
 
 </header>
@@ -43,19 +43,27 @@
     </div>
     
     
-  
-
-
 </section>
+
+
+
+
+
 
     <!-- questions -->
 <section id="questions-page" class="hide" >
 
 
     <!-- questions and options as a button -->
-    <p>
-      Questions
-    </p>
+
+    <div id="question"><p>Question</p>
+    </div>
+    <div>
+    <button class="choice" id="A" onclick="checkAnswer('A')">A</button>
+    <button class="choice" id="B" onclick="checkAnswer('B')">B</button>
+    <button class="choice" id="C" onclick="checkAnswer('C')">C</button>
+    <button class="choice" id="D" onclick="checkAnswer('D')">D</button>
+    </div>
 
     <!-- feedback on the answer correct or wrong -->
     <p class="qn-feedback">
@@ -63,6 +71,16 @@
     </p>
 
 </section>
+
+
+
+
+
+
+
+
+
+
 
     <!-- result page -->
 <section id="result-page" class="hide">
