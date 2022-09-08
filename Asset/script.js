@@ -21,6 +21,10 @@ var choiceC = document.getElementById('C');
 var choiceD = document.getElementById('D');
 
 var scoreResult = document.getElementById('score-result');
+var inputInitials = document.getElementById('input-initials');
+var initialsSubmit = document.getElementById('initials-submit');
+var clearHighScore =document.getElementById('clear-highscore');
+var initialsScore =document.getElementById('initials-score');
 let timerId;
 
 
@@ -193,7 +197,11 @@ function answerIsWrong(){
 
 
 //initals submit
-var initialsSubmit = document.getElementById('initials-submit');
+//var scoreResult = document.getElementById('score-result');
+//var inputInitials = document.getElementById('input-initials');
+//var initialsSubmit = document.getElementById('initials-submit');
+//var clearHighScore =document.getElementById('clear-highscore');
+//var initialsScore =document.getElementById('initials-score');
 initialsSubmit.addEventListener('click',initialSubmit);
    
   function initialSubmit() {
@@ -202,18 +210,38 @@ initialsSubmit.addEventListener('click',initialSubmit);
     resultPage.classList.add("hide");
     highscorePage.classList.remove("hide");
   }
- 
+ //store the input value in the initials
+
+ initialsSubmit.addEventListener('click',input);
+
+function input () {
+  localStorage.setItem('name',inputInitials.value);
+
+  nameDisplayCheck();
+
+}
+
+clearHighScore.addEventListener('click',clearscore);
+
+function clearscore () {
+  localStorage.clear();
+}
+
+function nameDisplayCheck() {
+  if (localStorage.getItem('name')) {
+    let name = localStorage.getItem('name');
+    initialsScore.textContent=name;
+  }
+}
 
 
 
 
 
 
-//show the score as time left
 
 
 
-//store the input value in the initials
 
 //get input value
 
