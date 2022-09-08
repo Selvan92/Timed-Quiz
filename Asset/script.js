@@ -21,6 +21,10 @@ var choiceC = document.getElementById('C');
 var choiceD = document.getElementById('D');
 
 var scoreResult = document.getElementById('score-result');
+var inputInitials = document.getElementById('input-initials');
+var initialsSubmit = document.getElementById('initials-submit');
+var clearHighScore =document.getElementById('clear-highscore');
+var initialsScore =document.getElementById('initials-score');
 let timerId;
 
 
@@ -48,10 +52,10 @@ function showHighScorePage(){
 //TIME
 
 //Need to get the time running while starting quiz
-let timeRemaining;
+let timeRemaining = Number(spanTimer.textContent);
 function startTimer() {
     timerId = setInterval(function(){
-        timeRemaining = Number(spanTimer.textContent)-1;
+        timeRemaining --;
 spanTimer.textContent=timeRemaining;
 
 //if time ends show the result page
@@ -76,11 +80,9 @@ function showResultPage(){
     questionsPage.classList.add("hide");
 
     resultPage.classList.remove("hide");
+
+    document.getElementById("score-result").textContent=timeRemaining.toString();
 }
-
-
-//time has to decrease when answering the wrong question
-
 
 
 
@@ -173,7 +175,8 @@ function checkAnswer(answer){
       answerIsCorrect();
   }else{
       // answer is wrong
-      timeRemaining =-10;
+      timeRemaining = timeRemaining - 10;
+      console.log(timeRemaining)
       answerIsWrong();
       
   }
@@ -194,7 +197,11 @@ function answerIsWrong(){
 
 
 //initals submit
-var initialsSubmit = document.getElementById('initials-submit');
+//var scoreResult = document.getElementById('score-result');
+//var inputInitials = document.getElementById('input-initials');
+//var initialsSubmit = document.getElementById('initials-submit');
+//var clearHighScore =document.getElementById('clear-highscore');
+//var initialsScore =document.getElementById('initials-score');
 initialsSubmit.addEventListener('click',initialSubmit);
    
   function initialSubmit() {
@@ -203,26 +210,29 @@ initialsSubmit.addEventListener('click',initialSubmit);
     resultPage.classList.add("hide");
     highscorePage.classList.remove("hide");
   }
- 
+ //store the input value in the initials
 
+ initialsSubmit.addEventListener('click',input);
 
+function input () {
+  localStorage.setItem('name',inputInitials.value);
 
+  nameDisplayCheck();
 
-//decrease 10 sec for wrong answer
+}
 
-//show the score as time left
+clearHighScore.addEventListener('click',clearscore);
 
-//store the input value in the initials
+function clearscore () {
+  localStorage.clear();
+}
 
-//get input value
-
-
-//show the initial input and the score in the highscore page
-
-//store the highscore page outputs
-
-//click go back button to load landing page
-
+function nameDisplayCheck() {
+  if (localStorage.getItem('name')) {
+    let name = localStorage.getItem('name');
+    initialsScore.textContent=name + "'s score is " +timeRemaining;
+  }
+}
 
 var goBack = document.getElementById('goback');
 goBack.addEventListener('click',btngoBack);
@@ -232,7 +242,6 @@ goBack.addEventListener('click',btngoBack);
   }
  
 
-//click clear high scores to clear the stored values
 
 
 

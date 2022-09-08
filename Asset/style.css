@@ -66,9 +66,9 @@ text-align: center;
   
     .choice{
       display: block;
-      
+     
       font-size: xx-large;
-      padding: 10px 10px;
+      padding: 20px 10px;
       background: rgb(30, 1, 86);
       color: white;
       text-decoration: solid;
@@ -112,8 +112,30 @@ text-align: center;
     font-size: 40px;
 
   }
-  .input-initials {
+  #input-initials {
     height: 50px;
     width: 300px;
-    font-size: 35px;
+    font-size: 45px;
+    
+    
   }
+
+  #highs-scores {
+    text-align: center;
+  }
+
+#initials-score {
+  height: 50px;
+    text-align: center;
+    font-size: 45px;
+    padding-left: 40%;
+    padding-right: 30%;
+    padding-bottom: 20px;
+    
+    
+}
+
+#btnhighscore {
+  padding-left: 41%;
+  padding-top: 30px;
+}
