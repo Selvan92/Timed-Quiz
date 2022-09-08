@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/> 
+    <link href="./Asset/style.css" rel="stylesheet"/>
+    <title>Coding Quiz Challenge</title>
+  </head>
+
+  <body>
+
+<header>
+  <!-- view high scores link -->
+  <div id="view-highscores">
+    <a  href="#high-scores" style="text-decoration: none;">View High Scores</a>
+    </div>
+   
+    <!-- timer -->
+    <div id="timer">Time: <span id="span-timer">10</span> Sec</div>
+
+
+</header>
+     <!-- landing page -->
+<section id="landing-page" >
+
+    <!-- start quiz heading -->
+    <h1>Coding Quiz Challenge</h1>
+
+    <!-- description of the quiz -->
+
+    <p id="quizdescription">Try to answer the following code-related questions within the time limit.<br>Keep in mind that incorrect answers will penalize your score/time <br> by ten seconds! </p>
+
+    <!-- start quiz button -->
+    
+    <div id="buttonstart">
+      <button id="btnstart-quiz">Start Quiz</button>
+    </div>
+       
+</section>
+
+    <!-- questions -->
+<section id="questions-page" class="hide" >
+
+
+    <!-- questions and options as a button -->
+
+    <div id="question"><p>Question</p>
+    </div>
+    <div id="buttonchoice">
+    <button class="choice" id="A" onclick="checkAnswer('A')">A</button>
+    <button class="choice" id="B" onclick="checkAnswer('B')">B</button>
+    <button class="choice" id="C" onclick="checkAnswer('C')">C</button>
+    <button class="choice" id="D" onclick="checkAnswer('D')">D</button>
+    </div>
+
+    <!-- feedback on the answer correct or wrong -->
+   
+   <hr>
+    <p id="qn-feedback">
+      
+    </p>
+
+</section>
+
+    <!-- result page -->
+
+<section id="result-page" class="hide">
+    <!-- all done header -->
+    <h1>
+      All Done!
+    </h1>
+    <!-- your final score is  -->
+    <div class="scorecontent">
+    <p>
+      Your final score is <span id="score-result"></span>
+    </p>
+    <!-- enter initials and input -->
+    <label>
+      Enter Initials:
+    </label>
+   
+    <input type="text" class="input-initials"> </input>
+
+    <!-- submit button -->
+    <button id="initials-submit" class ="button">
+    Submit
+    </button>
+    <!-- feed back on the initials input wrong /correct like alpha numerics -->
+<p class="initials-feedback"></p>
+</div>
+</section>
+
+    <!-- high score page -->
+
+<section id="highscore-page" class="hide">
+
+    <div id="high-scores" class="scorecontent">
+    
+   
+    <!-- high score header -->
+    <h1>
+    High Scores
+    </h1>
+    
+    <!-- show the initials and the score -->
+
+    <field class="initials-score" class="input-initials">1.
+    </field>
+
+    <!-- navigation button for go back to start or clear high scores -->
+    <div>
+    <button id="goback" class ="button">
+    Go Back
+    </button>
+    <button id="clearhighscore" class ="button">
+    Clear Scores
+    </button>
+  </div>
+     </div>
+
+    </section>
+
+
+<script src="./Asset/script.js"></script>
+  </body>
+
+</html>
