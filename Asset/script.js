@@ -76,6 +76,8 @@ function showResultPage(){
     questionsPage.classList.add("hide");
 
     resultPage.classList.remove("hide");
+
+    document.getElementById("score-result").textContent=timeRemaining.toString();
 }
 
 
@@ -209,7 +211,7 @@ initialsSubmit.addEventListener('click',initialSubmit);
 
 //show the score as time left
 
-document.getElementById("score-result").innerHTML=timeRemaining;
+
 
 //store the input value in the initials
 
