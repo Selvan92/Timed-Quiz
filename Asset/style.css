@@ -96,7 +96,8 @@ text-align: center;
     background: rgb(30, 1, 86);
     color: white;
     text-decoration: solid;
-    border-radius: 10px;    
+    border-radius: 10px; 
+    height: 40px;   
   }
   .button:hover{background-color: rgb(89, 142, 160);}
  .button:active {
@@ -114,5 +115,5 @@ text-align: center;
   .input-initials {
     height: 50px;
     width: 300px;
+    font-size: 35px;
   }
-  
