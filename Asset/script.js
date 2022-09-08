@@ -48,10 +48,10 @@ function showHighScorePage(){
 //TIME
 
 //Need to get the time running while starting quiz
-
+let timeRemaining;
 function startTimer() {
     timerId = setInterval(function(){
-        var timeRemaining = Number(spanTimer.textContent)-1;
+        timeRemaining = Number(spanTimer.textContent)-1;
 spanTimer.textContent=timeRemaining;
 
 //if time ends show the result page
@@ -77,8 +77,6 @@ function showResultPage(){
 
     resultPage.classList.remove("hide");
 }
-
-
 
 
 //time has to decrease when answering the wrong question
@@ -156,6 +154,7 @@ function showQuestionPage() {
     else {
       clearInterval(timerId);
       showResultPage();
+    
     }
   }
 choiceA.addEventListener('click',nextQuestion);
@@ -174,7 +173,7 @@ function checkAnswer(answer){
       answerIsCorrect();
   }else{
       // answer is wrong
-      
+      timeRemaining =-10;
       answerIsWrong();
       
   }
@@ -208,11 +207,15 @@ initialsSubmit.addEventListener('click',initialSubmit);
 
 
 
+
 //decrease 10 sec for wrong answer
 
 //show the score as time left
 
 //store the input value in the initials
+
+//get input value
+
 
 //show the initial input and the score in the highscore page
 
@@ -225,10 +228,7 @@ var goBack = document.getElementById('goback');
 goBack.addEventListener('click',btngoBack);
    
   function btngoBack() {
-    landingPage.classList.remove("hide");
-    questionsPage.classList.add("hide");
-    resultPage.classList.add("hide");
-    highscorePage.classList.add("hide");
+    window.location.reload();
   }
  
 

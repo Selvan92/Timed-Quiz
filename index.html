@@ -18,7 +18,7 @@
     </div>
    
     <!-- timer -->
-    <div id="timer">Time: <span id="span-timer">200</span> Sec</div>
+    <div id="timer">Time: <span id="span-timer">10</span> Sec</div>
 
 
 </header>
@@ -72,6 +72,7 @@
       All Done!
     </h1>
     <!-- your final score is  -->
+    <div class="scorecontent">
     <p>
       Your final score is <span id="score-result"></span>
     </p>
@@ -83,19 +84,19 @@
     <input class="input-initials"> </input>
 
     <!-- submit button -->
-    <button id="initials-submit">
+    <button id="initials-submit" class ="button">
     Submit
     </button>
     <!-- feed back on the initials input wrong /correct like alpha numerics -->
 <p class="initials-feedback"></p>
-
+</div>
 </section>
 
     <!-- high score page -->
 
 <section id="highscore-page" class="hide">
 
-    <div id="high-scores">
+    <div id="high-scores" class="scorecontent">
     
    
     <!-- high score header -->
@@ -105,16 +106,16 @@
     
     <!-- show the initials and the score -->
 
-    <field class="initials-score">1.
+    <field class="initials-score" class="input-initials">1.
     </field>
 
     <!-- navigation button for go back to start or clear high scores -->
     <div>
-    <button id="goback">
+    <button id="goback" class ="button">
     Go Back
     </button>
-    <button id="clearhighscore">
-    Clear High Scores
+    <button id="clearhighscore" class ="button">
+    Clear Scores
     </button>
   </div>
      </div>
