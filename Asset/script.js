@@ -20,7 +20,7 @@ var choiceB = document.getElementById('B');
 var choiceC = document.getElementById('C');
 var choiceD = document.getElementById('D');
 
-
+var scoreResult = document.getElementById('score-result');
 let timerId;
 
 
@@ -46,11 +46,12 @@ function showHighScorePage(){
   
 
 //TIME
+
 //Need to get the time running while starting quiz
 
 function startTimer() {
     timerId = setInterval(function(){
-        var timeRemaining = Number(spanTimer.textContent)-1
+        var timeRemaining = Number(spanTimer.textContent)-1;
 spanTimer.textContent=timeRemaining;
 
 //if time ends show the result page
@@ -58,6 +59,7 @@ spanTimer.textContent=timeRemaining;
 if(timeRemaining <=0){
     clearInterval(timerId);
     showResultPage();
+   
 }
     },1000)
 
@@ -65,6 +67,7 @@ if(timeRemaining <=0){
 btnStartQuiz.addEventListener('click',function(event){
     startTimer();
 });
+
 
 
 function showResultPage(){
@@ -77,22 +80,16 @@ function showResultPage(){
 
 
 
+
 //time has to decrease when answering the wrong question
 
-//time has to stop while answeting the last question show the result page
+
 
 
 
 
 //QUESTIONS
-//var questionPage = document.getElementById('question-page');
 
-//var question = document.getElementById('question');
-
-//var choiceA = document.getElementById('A');
-//var choiceB = document.getElementById('B');
-//var choiceC = document.getElementById('C');
-//var choiceD = document.getElementById('D');
 let questions = [
   {
     question: "Commonly used data types Do Not Include?",
@@ -168,9 +165,9 @@ choiceD.addEventListener('click',nextQuestion);
 
 
 //check answer
+function checkAnswer(answer){
 
-function checkAnswer(){
-  if(questions[runningQuestion].correct){
+  if(answer === questions[runningQuestion].correct){
       // answer is correct
       
       
@@ -179,31 +176,22 @@ function checkAnswer(){
       // answer is wrong
       
       answerIsWrong();
+      
   }
  
 }
 
 // answer is correct
 function answerIsCorrect(){
-  document.getElementById(qnFeedback).innerHTML = "Correct!";
+  document.getElementById("qn-feedback").innerHTML = "Correct!";
 }
 
 // answer is Wrong
 function answerIsWrong(){
-  document.getElementById(qnFeedback).innerHTML = "Wrong!";
+  
+  document.getElementById("qn-feedback").innerHTML = "Wrong!";
+  
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //initals submit
@@ -220,28 +208,31 @@ initialsSubmit.addEventListener('click',initialSubmit);
 
 
 
+//decrease 10 sec for wrong answer
 
-//show the feed back for the answer
+//show the score as time left
 
-//store the input valu in the initials
+//store the input value in the initials
+
+//show the initial input and the score in the highscore page
+
+//store the highscore page outputs
+
+//click go back button to load landing page
 
 
+var goBack = document.getElementById('goback');
+goBack.addEventListener('click',btngoBack);
+   
+  function btngoBack() {
+    landingPage.classList.remove("hide");
+    questionsPage.classList.add("hide");
+    resultPage.classList.add("hide");
+    highscorePage.classList.add("hide");
+  }
+ 
 
-//function answerIscorrect() {
- // document.getElementById().
-//}
-
-
-
-//INITIAL PAGE
-
-//Add initials and submit
-
-//FINAL SCORE PAGE
-
-// show the final score with the initials
-
-//click go back button to reload form starting
+//click clear high scores to clear the stored values
 
 
 
